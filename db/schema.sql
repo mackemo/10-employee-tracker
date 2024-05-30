@@ -1,4 +1,4 @@
--- delete exsiting database and create a new one
+-- delete existing database and create a new one
 DROP DATABASE IF EXISTS company_db;
 CREATE DATABASE company_db;
 
@@ -8,7 +8,7 @@ CREATE DATABASE company_db;
 -- created table for departments
 CREATE TABLE departments (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(30) UNIQUE NOT NULL,
+    name VARCHAR(30) UNIQUE NOT NULL
 );
 
 -- create table for roles
@@ -17,7 +17,7 @@ CREATE TABLE roles (
     title VARCHAR(30) NOT NULL,
     salary DECIMAL NOT NULL,
     department_id INT,
-    FOR KEY department_id
+    FOREIGN KEY department_id
     REFERENCES departments(id)
     ON DELETE CASCADE
 );
@@ -29,6 +29,6 @@ CREATE TABLE employees (
     last_name VARCHAR(30) NOT NULL,
     role_id INT,
     manager_id INT,
-    FOR KEY role_id REFERENCES roles(id) ON DELETE CASCADE,
-    FOR KEY manager_id REFERENCES employees(id) ON DELETE SET NULL
+    FOREIGN KEY role_id REFERENCES roles(id) ON DELETE CASCADE,
+    FOREIGN KEY manager_id REFERENCES employees(id) ON DELETE SET NULL
 );
