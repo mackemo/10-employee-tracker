@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const viewAllDepartments = require('./lib/viewAllDepartments');
 const viewAllRoles = require('./lib/viewAllRoles');
+const viewAllEmployees = require('./lib/viewAllEmployees');
 
 
 const questions = [
@@ -29,7 +30,7 @@ function init() {
                     break;
 
                 case 'View all employees':
-                    await
+                    await viewAllEmployees();
                     break;
 
                 case 'Add a department':
