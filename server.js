@@ -1,6 +1,7 @@
 const express = require('express');
 // creating connection pool to connect application to server
 const { POOL } = require('pg');
+// package to store sensitive info
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
@@ -24,5 +25,10 @@ const pool = new POOL (
 )
 
 pool.connect();
+
+// listening for req
+app.listen(PORT, () => {
+    console.log(`Listening at http://localhost:${PORT}`);
+})
 
 
