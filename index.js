@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const viewAllDepartments = require('./lib/viewAllDepartments');
 
 const questions = [
     {
@@ -18,7 +19,7 @@ function init() {
 
             switch (answers) {
                 case 'View all departmetns':
-                    await
+                    await viewAllDepartments();
                     break;
 
                 case 'View all roles':
