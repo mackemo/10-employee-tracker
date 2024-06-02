@@ -2,6 +2,10 @@ const inquirer = require('inquirer');
 const viewAllDepartments = require('./lib/viewAllDepartments');
 const viewAllRoles = require('./lib/viewAllRoles');
 const viewAllEmployees = require('./lib/viewAllEmployees');
+const addDepartment = require('./lib/addDepartment');
+const addRole = require('./lib/addRole');
+const addEmployee = require('./lib/addEmployee');
+const updateEmployee = require('./lib/updateEmployeeRole');
 
 
 const questions = [
@@ -34,19 +38,19 @@ function init() {
                     break;
 
                 case 'Add a department':
-                    await
+                    await addDepartment();
                     break;
 
                 case 'Add a role':
-                    await
+                    await addRole();
                     break;
 
                 case 'Add an employee':
-                    await
+                    await addEmployee();
                     break;
 
                 case 'Update an employee role':
-                    await
+                    await updateEmployee();
                     break;
     
             }
