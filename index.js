@@ -18,7 +18,7 @@ function init() {
 
             switch (answers) {
                 case 'View all departmetns':
-                    await
+                    await 
                     break;
 
                 case 'View all roles':
