@@ -25,7 +25,7 @@ function init() {
         .then(async (answers) => {
 
             switch (answers) {
-                case 'View all departmetns':
+                case 'View all departments':
                     await viewAllDepartments();
                     break;
 
