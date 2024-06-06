@@ -1,11 +1,14 @@
 const inquirer = require('inquirer');
-const viewAllDepartments = require('./lib/viewAllDepartments');
-const viewAllRoles = require('./lib/viewAllRoles');
-const viewAllEmployees = require('./lib/viewAllEmployees');
-const addDepartment = require('./lib/addDepartment');
-const addRole = require('./lib/addRole');
-const addEmployee = require('./lib/addEmployee');
-const updateEmployee = require('./lib/updateEmployeeRole');
+
+const { 
+    viewAllDepartments, 
+    viewAllEmployees,
+    viewAllRoles,
+    addDepartment,
+    addEmployee,
+    addRole,
+    updateEmployee
+} = require('./lib/index');
 
 const questions = [
     {
