@@ -61,8 +61,14 @@ function init() {
                 case 'Update an employee role':
                     updateEmployee();
                     break;
-   
+
+
+                case 'Exit':
+                    console.log('Goodbye!')
+                    return;
             }
+
+            return init();
         })
 
 
