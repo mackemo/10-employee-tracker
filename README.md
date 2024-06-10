@@ -21,18 +21,18 @@ The tenth challenge assignment from a bootcamp where the task was to build a com
 
 
 ## Process
-The process included downloading the latest version of Inquirer (8.2.4).
+The process included downloading the latest version of Inquirer (8.2.4). In the root index.js file, the inquirer prompt questions are stated in an array for user input. The options being, viewing all departments, viewing all roles, viewing all employees, adding a department/role/employee, and updating an employee role. Additionally, a choice was included to exit the prompt questions, closing the server. A db folder included the schema file where the company database was created for three tables: departments, roles, employees. The seeds file in the db folder added the initial data of five employees. For the actions of viewing and adding to work, when a choice is made in the prompt of questions, a function is run. A folder called lib included the 7 different functions in their separate files for the 7 different choices. Those functions runa query that allows the viewing and adding of a table or row, respectively. Lastly, a connection pool was created in the file connection.js to connect the postgres database to the server. 
 
 
 ## Links
-Link to deployed site: 
+Link to deployed site: https://drive.google.com/file/d/1xM-w4MFCEGdOS1mtH_yGVQ5vfOHO2Rl9/view
 
 ## Installation
-To install this application, copy the ssh key from my github repo and clone it into your respository.
+To install this application, copy the ssh key from my github repo and clone it into your respository. Do an npm install.
 
 
 ## Usage
-This site was a practice assignment for bootcamp students but can be used to see how an application made by Express.js works. 
+This site was a practice assignment for bootcamp students but can be used to see how an application made by MySQL works. 
 
 
 ## Licenses
@@ -44,7 +44,7 @@ Contact me by email provided in Questions section.
 
 
 ## Test
-To test this application, simply open the applcation in a browser and try it out.
+To test this application, simply open the applcation in VScode and try it out.
 
 
 ## Acknowledgement
