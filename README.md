@@ -19,6 +19,7 @@ The tenth challenge assignment from a bootcamp where the task was to build a com
 -[Acknowledgement](#Acknowledgement)
 -[Questions](#Questions)
 
+<img src="./assets/image.png"/>
 
 ## Process
 The process included downloading the latest version of Inquirer (8.2.4). In the root index.js file, the inquirer prompt questions are stated in an array for user input. The options being, viewing all departments, viewing all roles, viewing all employees, adding a department/role/employee, and updating an employee role. Additionally, a choice was included to exit the prompt questions, closing the server. A db folder included the schema file where the company database was created for three tables: departments, roles, employees. The seeds file in the db folder added the initial data of five employees. For the actions of viewing and adding to work, when a choice is made in the prompt of questions, a function is run. A folder called lib included the 7 different functions in their separate files for the 7 different choices. Those functions runa query that allows the viewing and adding of a table or row, respectively. Lastly, a connection pool was created in the file connection.js to connect the postgres database to the server. 
