@@ -19,7 +19,7 @@ const questions = [
         'Add a department', 'Add a role', 'Add an employee', 'Update an employee role', 'Exit'],
        
     }
-]
+];
 
 function init() {
     return inquirer
@@ -29,38 +29,31 @@ function init() {
 
             switch (answers.choice) {
                 case 'View all departments':
-                    viewAllDepartments();
-                    break;
+                    return viewAllDepartments().then(init);
 
 
                 case 'View all roles':
-                    viewAllRoles();
-                    break;
+                    return viewAllRoles().then(init);
 
 
                 case 'View all employees':
-                    viewAllEmployees();
-                    break;
+                    return viewAllEmployees().then(init);
 
 
                 case 'Add a department':
-                    addDepartment();
-                    break;
+                    return addDepartment().then(init);
 
 
                 case 'Add a role':
-                    addRole();
-                    break;
+                    return addRole().then(init);
 
 
                 case 'Add an employee':
-                    addEmployee();
-                    break;
+                    return addEmployee().then(init);
 
 
                 case 'Update an employee role':
-                    updateEmployee();
-                    break;
+                    return updateEmployee().then(init);
 
 
                 case 'Exit':
@@ -68,13 +61,13 @@ function init() {
                     return;
             }
 
-            return init();
         })
 
 
         .catch(function(err) {
             console.error(("Error occurred:", err));
-        });  
-}
+        }); 
+        
+};
 
 init();
