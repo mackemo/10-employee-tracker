@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 
+// importing all files with functions to be used
 const { 
     viewAllDepartments, 
     viewAllEmployees,
@@ -10,6 +11,7 @@ const {
     updateEmployee
 } = require('./lib/index');
 
+// array of questions for user input
 const questions = [
     {
         type: 'list',
@@ -26,7 +28,8 @@ function init() {
         .prompt(questions)
         .then((answers) => {
 
-
+            //  switch statement to run a function based off of user choice
+            // runs init after running a function to display questions again after a choice
             switch (answers.choice) {
                 case 'View all departments':
                     return viewAllDepartments().then(init);
@@ -55,7 +58,7 @@ function init() {
                 case 'Update an employee role':
                     return updateEmployee().then(init);
 
-
+                // the exit choice exits the inquirer prompt questions
                 case 'Exit':
                     console.log('Goodbye!')
                     return;
